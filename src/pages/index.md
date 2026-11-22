@@ -55,6 +55,10 @@ testimonial:
 
 ## Writing and talks
 
+- **[the jagged edge of agentic analytics](https://dashboard-bakeoff.anders.omg.lol/about.html)**
+
+  Field notes from the Dashboard Bakeoff on building static dashboards with agents and the decisions that still need a human.
+
 - **[A Catalog Is All You Need](https://roundup.getdbt.com/p/a-catalog-is-all-you-need)**
 
   A Roundup essay and demo showing one local dbt project writing to Snowflake and Databricks catalogs with DuckDB and a single config change.
