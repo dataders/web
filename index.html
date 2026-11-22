@@ -11,7 +11,7 @@
   <main id="main">
     <header id="top">
       <h1>Anders Swanson</h1>
-      <p id="approach">I work on open source data tools. I like building prototypes, explaining how systems fit together, and bringing users into the conversation early.</p>
+      <p id="approach">I build open source data tools with the people who use them. I became one with the database from the outside in. I started with what different warehouses could do, got into SQL syntax and parsing, and then got deep into logical plans. Famously, I don’t care about execution optimization.</p>
       <nav class="links" id="connect" aria-label="Profiles and working guide">
         <a href="https://github.com/dataders">GitHub</a>
         <a href="https://www.linkedin.com/in/andersswanson/">LinkedIn</a>
@@ -27,23 +27,26 @@
 
     <section id="main-projects" aria-labelledby="main-projects-title">
       <h2 id="main-projects-title">Main projects</h2>
-      <p>Some of the bigger things I’ve worked on at dbt Labs.</p>
       <ul class="entries" role="list">
+        <li>
+          <h3>Incubating dbt features</h3>
+          <p>At dbt Labs, I incubated some of dbt’s hallmark features with the community. That includes <a href="https://docs.getdbt.com/docs/dbt-versions">dbt v2</a>, the <a href="https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0">dbt Information Schema</a> and <a href="https://docs.getdbt.com/docs/build/checks?version=2">Checks</a>, <a href="https://roundup.getdbt.com/p/a-catalog-is-all-you-need">Iceberg catalog support</a>, <a href="https://github.com/dbt-labs/dbt/discussions/5796">Python models</a>, <a href="https://docs.getdbt.com/docs/build/materializations#materialized-view">materialized views</a>, and <a href="https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh">Cross-platform dbt Mesh</a>.</p>
+        </li>
+        <li>
+          <h3>dbt adapters</h3>
+          <ul class="adapter-work">
+            <li><strong>Helped create</strong> <a href="https://github.com/microsoft/dbt-synapse">dbt-synapse</a> and <a href="https://github.com/firebolt-db/dbt-firebolt">dbt-firebolt</a>.</li>
+            <li><strong>Shepherded</strong> the <a href="https://github.com/databricks/dbt-databricks">Databricks</a>, <a href="https://www.getdbt.com/blog/announcing-starburst-support">Starburst (Trino)</a>, and <a href="https://github.com/microsoft/dbt-fabric">Microsoft Fabric</a> adapters onto the dbt platform. I also worked on <a href="https://github.com/dbt-labs/dbt/issues/14325">MotherDuck support in dbt</a>.</li>
+            <li><strong>Rewrote</strong> the <a href="https://duckdb.org/2026/09/22/dbt-fusion">DuckDB</a> and <a href="https://docs.getdbt.com/docs/platform/connect-data-platform/connect-clickhouse?version=2.0">ClickHouse</a> adapters for dbt v2.</li>
+          </ul>
+        </li>
         <li>
           <a href="https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh">Cross-platform dbt Mesh and Iceberg</a>
           <p>I built an early Iceberg prototype for cross-platform dbt Mesh, which dbt Labs announced at Coalesce 2024. Later, I contributed <a href="https://github.com/duckdb/duckdb-iceberg/pull/1017">DuckDB write options</a> and <a href="https://roundup.getdbt.com/p/a-catalog-is-all-you-need">showed one local dbt project writing to Snowflake and Databricks</a> with a single config change.</p>
         </li>
         <li>
-          <a href="https://github.com/dbt-labs/dbt/discussions/15185">Developer experience for dbt Fusion</a>
-          <p>I helped build the <a href="https://duckdb.org/2026/09/22/dbt-fusion">DuckDB adapter that ships with dbt v2</a>. I also helped developers try Fusion by writing migration guidance and release updates, gathering community feedback, and creating issue forms for the new engine.</p>
-        </li>
-        <li>
           <a href="https://github.com/dbt-labs/dbt-charts">dbt Charts</a>
           <p>I contribute to the open source tool for building dashboards with SQL and YAML. I’ve used it for <a href="https://crawl-atlas.anders.omg.lol/">Crawl Atlas</a> and <a href="https://dashboard-bakeoff.anders.omg.lol/">Dashboard Bakeoff</a>.</p>
-        </li>
-        <li>
-          <a href="https://www.getdbt.com/blog/announcing-starburst-support">Starburst and Trino in dbt Cloud</a>
-          <p>I worked with partner engineers and dbt teams to bring the Trino-compatible Starburst adapter to dbt Cloud and wrote the general availability announcement.</p>
         </li>
       </ul>
     </section>
