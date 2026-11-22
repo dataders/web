@@ -1,0 +1,17 @@
+{
+  "name": "anders-portfolio",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.23.4"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/markdown-satteri": "0.4.10",
+    "astro": "7.4.13"
+  }
+}

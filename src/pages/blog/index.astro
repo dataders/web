@@ -1,0 +1,27 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import { formatPostDate, getPublishedPosts } from '../../lib/blog';
+
+const posts = await getPublishedPosts();
+---
+
+<SiteLayout title="Blog · Anders Swanson" description="Posts by Anders Swanson.">
+  <nav class="links blog-nav" aria-label="Site navigation">
+    <a href="/">Home</a>
+    <a href="/blog/" aria-current="page">Blog</a>
+  </nav>
+  <h1>Blog</h1>
+  {posts.length ? (
+    <ul class="post-list" role="list">
+      {posts.map(({ id, data }) => (
+        <li>
+          <h2><a href={`/blog/${id}/`}>{data.title}</a></h2>
+          <time datetime={data.date}>{formatPostDate(data.date)}</time>
+          {data.description && <p>{data.description}</p>}
+        </li>
+      ))}
+    </ul>
+  ) : (
+    <p class="blog-empty">No posts here yet. You can find my <a href="/#writing-and-talks">writing and talks</a> on the homepage.</p>
+  )}
+</SiteLayout>
