@@ -2,7 +2,7 @@
 import SiteLayout from './SiteLayout.astro';
 
 const { frontmatter, headings } = Astro.props;
-const { title, description, intro, links, testimonial } = frontmatter;
+const { title, description, intro, links, resume, testimonial } = frontmatter;
 const sections = headings.filter(({ depth }) => depth === 2);
 ---
 
@@ -10,8 +10,14 @@ const sections = headings.filter(({ depth }) => depth === 2);
   <header id="top">
     <h1>{title}</h1>
     <p id="approach">{intro}</p>
-    <nav class="links" id="connect" aria-label="Profiles and working guide">
-      {links.map(({ label, url }) => <a href={url}>{label}</a>)}
+    <nav class="links profile-links" id="connect" aria-label="Profile links and resources">
+      {links.map(({ label, url, icon }) => (
+        <a href={url}>
+          {icon && <img src={icon} width="18" height="18" alt="" />}
+          {label}
+        </a>
+      ))}
+      {resume && <a href={resume} download="Anders-Swanson-Resume.pdf">Résumé (PDF)</a>}
     </nav>
     <nav class="links section-links" aria-label="Site navigation">
       {sections.map(({ slug, text }) => <a href={`#${slug}`}>{text}</a>)}

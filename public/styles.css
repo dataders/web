@@ -71,8 +71,29 @@ a:focus-visible {
   gap: 0.25rem 1.25rem;
 }
 
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2rem;
+  color: #24292e;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration-color: #8a919c;
+}
+
+.profile-links a:hover {
+  color: #164c9c;
+  text-decoration-color: currentColor;
+}
+
+.profile-links img {
+  flex: none;
+}
+
 .section-links {
-  margin-top: 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
   font-weight: 600;
 }
 

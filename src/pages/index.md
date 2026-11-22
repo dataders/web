@@ -6,8 +6,10 @@ intro: I build open source data tools with the people who use them. I became one
 links:
   - label: GitHub
     url: https://github.com/dataders
+    icon: /icons/github.svg
   - label: LinkedIn
     url: https://www.linkedin.com/in/andersswanson/
+    icon: /icons/linkedin.png
   - label: Working with me
     url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
 testimonial:
