@@ -18,6 +18,7 @@ main {
 
 h1,
 h2,
+h3,
 p,
 figure,
 blockquote {
@@ -25,7 +26,8 @@ blockquote {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   line-height: 1.2;
 }
 
@@ -36,6 +38,11 @@ h1 {
 
 h2 {
   font-size: 1.25rem;
+}
+
+h3 {
+  margin-top: 1.25rem;
+  font-size: 1rem;
 }
 
 header p {
@@ -64,6 +71,11 @@ a:focus-visible {
   gap: 0.25rem 1.25rem;
 }
 
+.section-links {
+  margin-top: 1.25rem;
+  font-weight: 600;
+}
+
 section,
 footer {
   margin-top: 2rem;
@@ -79,7 +91,7 @@ footer {
   list-style: none;
 }
 
-.entries a {
+.entries li > a {
   font-weight: 600;
 }
 
@@ -87,10 +99,6 @@ footer {
 figcaption,
 footer {
   color: #525252;
-}
-
-figure {
-  margin-top: 0.875rem;
 }
 
 blockquote {
