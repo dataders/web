@@ -2,10 +2,10 @@ import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
 
 const legacyAnchors = new Map([
-  ['Main projects', ['main-projects-title']],
+  ['dbt Labs', ['main-projects', 'main-projects-title']],
   ['Side projects', ['fun-projects']],
   ['Writing and talks', ['ideas']],
-  ['Open source contributions', ['open-source', 'work']],
+  ['Open source', ['open-source-contributions', 'work']],
 ]);
 
 const preserveHomepageAnchors = {

@@ -19,21 +19,17 @@ testimonial:
   url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
 ---
 
-## Main projects
+## dbt Labs
 
 - ### Incubating dbt features
 
-  At dbt Labs, I incubated some of dbt’s hallmark features with the community. That includes [dbt v2](https://docs.getdbt.com/docs/dbt-versions), the [dbt Information Schema](https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0) and [Checks](https://docs.getdbt.com/docs/build/checks?version=2), [Iceberg catalog support](https://roundup.getdbt.com/p/a-catalog-is-all-you-need), [Python models](https://github.com/dbt-labs/dbt/discussions/5796), [materialized views](https://docs.getdbt.com/docs/build/materializations#materialized-view), and [Cross-platform dbt Mesh](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh).
+  I worked with the community on [dbt v2](https://docs.getdbt.com/docs/dbt-versions), the [dbt Information Schema](https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0) and [Checks](https://docs.getdbt.com/docs/build/checks?version=2), [Iceberg catalog support](https://roundup.getdbt.com/p/a-catalog-is-all-you-need), [Python models](https://github.com/dbt-labs/dbt/discussions/5796), and [materialized views](https://docs.getdbt.com/docs/build/materializations#materialized-view). I also built an early Iceberg prototype for [cross-platform dbt Mesh](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh).
 
 - ### dbt adapters
 
   - **Helped create** [dbt-synapse](https://github.com/microsoft/dbt-synapse) and [dbt-firebolt](https://github.com/firebolt-db/dbt-firebolt).
   - **Shepherded** the [Databricks](https://github.com/databricks/dbt-databricks), [Starburst (Trino)](https://www.getdbt.com/blog/announcing-starburst-support), and [Microsoft Fabric](https://github.com/microsoft/dbt-fabric) adapters onto the dbt platform. I also worked on [MotherDuck support in dbt](https://github.com/dbt-labs/dbt/issues/14325).
   - **Rewrote** the [DuckDB](https://duckdb.org/2026/09/22/dbt-fusion) and [ClickHouse](https://docs.getdbt.com/docs/platform/connect-data-platform/connect-clickhouse?version=2.0) adapters for dbt v2.
-
-- **[Cross-platform dbt Mesh and Iceberg](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh)**
-
-  I built an early Iceberg prototype for cross-platform dbt Mesh, which dbt Labs announced at Coalesce 2024. Later, I contributed [DuckDB write options](https://github.com/duckdb/duckdb-iceberg/pull/1017) and [showed one local dbt project writing to Snowflake and Databricks](https://roundup.getdbt.com/p/a-catalog-is-all-you-need) with a single config change.
 
 - **[dbt Charts](https://github.com/dbt-labs/dbt-charts)**
 
@@ -61,7 +57,7 @@ testimonial:
 
 - **[A Catalog Is All You Need](https://roundup.getdbt.com/p/a-catalog-is-all-you-need)**
 
-  A Roundup essay and demo on using a local dbt project with DuckDB to write to Snowflake and Databricks catalogs.
+  A Roundup essay and demo showing one local dbt project writing to Snowflake and Databricks catalogs with DuckDB and a single config change.
 
 - **[Iceberg?? Give it a REST!](https://roundup.getdbt.com/p/iceberg-give-it-a-rest)**
 
@@ -91,7 +87,7 @@ testimonial:
 
   A discussion about letting dbt create and manage external tables declared in a project.
 
-## Open source contributions
+## Open source
 
 ### DuckDB and Iceberg
 
