@@ -45,6 +45,13 @@ testimonial:
 
 <p class="home-more"><a class="more-button" href="/gallery/">More pictures</a></p>
 
+## Memes
+
+[![A wide-eyed dog illustrates what happens when you gaze too long into a CSV parser](/memes/images/csv-parser.png)](/memes/)
+[![An iceberg charts the many meanings of schema in data](/memes/images/schema-iceberg.png)](/memes/)
+
+<p class="home-more"><a class="more-button" href="/memes/">More memes</a></p>
+
 ## Open source
 
 - **[Iceberg catalog write compatibility](https://github.com/duckdb/duckdb-iceberg/pull/1017)**

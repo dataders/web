@@ -1,0 +1,117 @@
+---
+interface Props {
+  images: { src: string; fullSrc?: string; width: number; height: number; alt: string }[];
+  label: string;
+}
+
+const { images, label } = Astro.props;
+---
+
+<ul class="gallery" role="list" aria-label={label}>
+  {images.map(({ src, fullSrc, width, height, alt }, index) => (
+    <li>
+      <a href={fullSrc ?? src} data-full-size={fullSrc ? '' : undefined}>
+        <img src={src} width={width} height={height} alt={alt} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
+      </a>
+    </li>
+  ))}
+</ul>
+
+<dialog id="gallery-viewer" aria-label="Enlarged screenshot">
+  <form method="dialog">
+    {images.some(({ fullSrc }) => fullSrc) && <a class="gallery-full-size" target="_blank" rel="noopener" hidden>Open full-size image</a>}
+    <button autofocus>Close</button>
+  </form>
+  <img alt="" />
+</dialog>
+
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>('#gallery-viewer');
+  const enlarged = viewer?.querySelector('img');
+  const fullSize = viewer?.querySelector<HTMLAnchorElement>('.gallery-full-size');
+
+  if (viewer && enlarged) {
+    for (const link of document.querySelectorAll<HTMLAnchorElement>('.gallery a')) {
+      link.addEventListener('click', (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const image = link.querySelector('img');
+        if (!image) return;
+
+        event.preventDefault();
+        enlarged.src = image.currentSrc || image.src;
+        if (fullSize) {
+          fullSize.hidden = !link.hasAttribute('data-full-size');
+          fullSize.href = link.href;
+        }
+        enlarged.alt = image.alt;
+        viewer.showModal();
+      });
+    }
+  }
+</script>
+
+<style>
+  :global(main:has(.gallery)) {
+    max-width: 86rem;
+    padding: clamp(1.25rem, 4vw, 3.5rem);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+    align-items: center;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    cursor: zoom-in;
+  }
+
+  .gallery img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 20rem;
+  }
+
+  dialog {
+    max-width: calc(100% - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding: 0.75rem;
+    border: 0;
+  }
+
+  dialog::backdrop {
+    background: rgb(0 0 0 / 72%);
+  }
+
+  dialog form {
+    margin-bottom: 0.5rem;
+    text-align: end;
+  }
+
+  .gallery-full-size {
+    margin-inline-end: 0.75rem;
+  }
+
+  dialog button {
+    font: inherit;
+    cursor: pointer;
+  }
+
+  dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 5rem);
+    object-fit: contain;
+  }
+</style>
