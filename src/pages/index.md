@@ -2,7 +2,10 @@
 layout: ../layouts/HomeLayout.astro
 title: Anders Swanson
 description: Anders Swanson’s projects, writing, talks, and open source contributions.
-intro: I build open source data tools with the people who use them. I became one with the database from the outside in. I started with what different warehouses could do, got into SQL syntax and parsing, and then got deep into logical plans. Famously, I don’t care about execution optimization.
+intro: |-
+  dot connector. incorrigibly curious. thinks in public around corners. strong UX instincts built over a decade of griping to product owners. i serve the realm
+
+  i'm a bizarro databaseologist in that I don't care about execution planning optimization but care so much about parsing and compiling!
 links:
   - label: GitHub
     url: https://github.com/dataders
@@ -19,41 +22,9 @@ testimonial:
   url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
 ---
 
-## dbt Labs
+## Writing
 
-- ### Incubating dbt features
-
-  I worked with the community on [dbt v2](https://docs.getdbt.com/docs/dbt-versions), the [dbt Information Schema](https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0) and [Checks](https://docs.getdbt.com/docs/build/checks?version=2), [Iceberg catalog support](https://roundup.getdbt.com/p/a-catalog-is-all-you-need), [Python models](https://github.com/dbt-labs/dbt/discussions/5796), and [materialized views](https://docs.getdbt.com/docs/build/materializations#materialized-view). I also built an early Iceberg prototype for [cross-platform dbt Mesh](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh).
-
-- ### dbt adapters
-
-  - **Helped create** [dbt-synapse](https://github.com/microsoft/dbt-synapse) and [dbt-firebolt](https://github.com/firebolt-db/dbt-firebolt).
-  - **Shepherded** the [Databricks](https://github.com/databricks/dbt-databricks), [Starburst (Trino)](https://www.getdbt.com/blog/announcing-starburst-support), and [Microsoft Fabric](https://github.com/microsoft/dbt-fabric) adapters onto the dbt platform. I also worked on [MotherDuck support in dbt](https://github.com/dbt-labs/dbt/issues/14325).
-  - **Rewrote** the [DuckDB](https://duckdb.org/2026/09/22/dbt-fusion) and [ClickHouse](https://docs.getdbt.com/docs/platform/connect-data-platform/connect-clickhouse?version=2.0) adapters for dbt v2.
-
-- **[dbt Charts](https://github.com/dbt-labs/dbt-charts)**
-
-  I contribute to the open source tool for building dashboards with SQL and YAML. I’ve used it for [Crawl Atlas](https://crawl-atlas.anders.omg.lol/) and [Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/).
-
-## Side projects
-
-- **[ADU Adoration](https://adu.anders.omg.lol/)**
-
-  Plans, renderings, and an interactive model for a backyard apartment.
-
-- **[Crawl Atlas / Dungeon Crawler’s Lookbook](https://crawl-atlas.anders.omg.lol/)**
-
-  A reading companion built with dbt Charts. Follow character stats, skills, and inventory up to where you are in the series.
-
-- **[James River Gooners](https://gooners.anders.omg.lol/)**
-
-  A searchable browser for Cannon’s Auctions, with filters for finding the good stuff.
-
-- **[Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/)**
-
-  Switch between dashboards built with different frameworks to compare how they show the same dbt issue data.
-
-## Writing and talks
+[All posts](/blog/)
 
 - **[the jagged edge of agentic analytics](/blog/the-jagged-edge-of-agentic-analytics/)**
 
@@ -83,6 +54,13 @@ testimonial:
 
   A discussion about letting dbt create and manage external tables declared in a project.
 
+## Pretty pictures
+
+[All diagrams and whiteboards](/gallery/)
+
+[![Before and after open data infrastructure](/gallery/images/before-and-after-odi.png)](/gallery/)
+[![Fusion distribution diagram](/gallery/images/fusion-distribution.png)](/gallery/)
+
 ## Open source
 
 ### DuckDB and Iceberg
@@ -103,7 +81,41 @@ testimonial:
 
   Added an uppercase mode for unquoted SQL identifiers to help tools interoperate with engines like Snowflake.
 
-### dbt
+## Side projects
+
+- **[ADU Adoration](https://adu.anders.omg.lol/)**
+
+  Plans, renderings, and an interactive model for a backyard apartment.
+
+- **[Crawl Atlas / Dungeon Crawler’s Lookbook](https://crawl-atlas.anders.omg.lol/)**
+
+  A reading companion built with dbt Charts. Follow character stats, skills, and inventory up to where you are in the series.
+
+- **[James River Gooners](https://gooners.anders.omg.lol/)**
+
+  A searchable browser for Cannon’s Auctions, with filters for finding the good stuff.
+
+- **[Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/)**
+
+  Switch between dashboards built with different frameworks to compare how they show the same dbt issue data.
+
+## Things I helped out with at dbt
+
+- ### Incubating dbt features
+
+  I worked with the community on [dbt v2](https://docs.getdbt.com/docs/dbt-versions), the [dbt Information Schema](https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0) and [Checks](https://docs.getdbt.com/docs/build/checks?version=2), [Iceberg catalog support](https://roundup.getdbt.com/p/a-catalog-is-all-you-need), [Python models](https://github.com/dbt-labs/dbt/discussions/5796), and [materialized views](https://docs.getdbt.com/docs/build/materializations#materialized-view). I also built an early Iceberg prototype for [cross-platform dbt Mesh](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh).
+
+- ### dbt adapters
+
+  - **Helped create** [dbt-synapse](https://github.com/microsoft/dbt-synapse) and [dbt-firebolt](https://github.com/firebolt-db/dbt-firebolt).
+  - **Shepherded** the [Databricks](https://github.com/databricks/dbt-databricks), [Starburst (Trino)](https://www.getdbt.com/blog/announcing-starburst-support), and [Microsoft Fabric](https://github.com/microsoft/dbt-fabric) adapters onto the dbt platform. I also worked on [MotherDuck support in dbt](https://github.com/dbt-labs/dbt/issues/14325).
+  - **Rewrote** the [DuckDB](https://duckdb.org/2026/09/22/dbt-fusion) and [ClickHouse](https://docs.getdbt.com/docs/platform/connect-data-platform/connect-clickhouse?version=2.0) adapters for dbt v2.
+
+- **[dbt Charts](https://github.com/dbt-labs/dbt-charts)**
+
+  I contribute to the open source tool for building dashboards with SQL and YAML. I’ve used it for [Crawl Atlas](https://crawl-atlas.anders.omg.lol/) and [Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/).
+
+### dbt Core and Fusion
 
 - **[Scope relation cache lookups to selected schemas](https://github.com/dbt-labs/dbt/pull/15915)**
 

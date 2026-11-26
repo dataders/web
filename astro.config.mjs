@@ -2,9 +2,9 @@ import { defineConfig } from 'astro/config';
 import { satteri } from '@astrojs/markdown-satteri';
 
 const legacyAnchors = new Map([
-  ['dbt Labs', ['main-projects', 'main-projects-title']],
+  ['Things I helped out with at dbt', ['dbt-labs', 'dbt', 'main-projects', 'main-projects-title']],
   ['Side projects', ['fun-projects']],
-  ['Writing and talks', ['ideas']],
+  ['Writing', ['writing-and-talks', 'ideas']],
   ['Open source', ['open-source-contributions', 'work']],
 ]);
 

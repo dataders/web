@@ -9,7 +9,9 @@ const sections = headings.filter(({ depth }) => depth === 2);
 <SiteLayout title={title} description={description}>
   <header id="top">
     <h1>{title}</h1>
-    <p id="approach">{intro}</p>
+    <div id="approach">
+      {intro.split(/\n[ \t]*\n/).map((paragraph: string) => <p>{paragraph}</p>)}
+    </div>
     <nav class="links profile-links" id="connect" aria-label="Profile links and resources">
       {links.map(({ label, url, icon }) => (
         <a href={url}>
@@ -21,8 +23,6 @@ const sections = headings.filter(({ depth }) => depth === 2);
     </nav>
     <nav class="links section-links" aria-label="Site navigation">
       {sections.map(({ slug, text }) => <a href={`#${slug}`}>{text}</a>)}
-      <a href="/blog/">Blog</a>
-      <a href="/gallery/">Gallery</a>
     </nav>
   </header>
 
