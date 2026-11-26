@@ -33,7 +33,9 @@ const sections = headings.filter(({ depth }) => depth === 2);
   {testimonial && (
     <footer>
       <figure>
-        <blockquote>{testimonial.quote}</blockquote>
+        {testimonial.paraphrase
+          ? <p>{testimonial.paraphrase}</p>
+          : <blockquote>{testimonial.quote}</blockquote>}
         <figcaption>{testimonial.attribution} <a href={testimonial.url}>{testimonial.label}</a></figcaption>
       </figure>
     </footer>

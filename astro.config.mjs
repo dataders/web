@@ -5,7 +5,7 @@ const legacyAnchors = new Map([
   ['Things I helped out with at dbt', ['dbt-labs', 'dbt', 'main-projects', 'main-projects-title']],
   ['Side projects', ['fun-projects']],
   ['Writing', ['writing-and-talks', 'ideas']],
-  ['Open source', ['open-source-contributions', 'work']],
+  ['Open source', ['open-source-contributions', 'work', 'duckdb-and-iceberg']],
 ]);
 
 const preserveHomepageAnchors = {

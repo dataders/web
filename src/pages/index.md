@@ -16,15 +16,13 @@ links:
   - label: Working with me
     url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
 testimonial:
-  quote: “Anders, when properly engaged, can move a product forward in giant leaps at a time.”
-  attribution: A colleague, quoted in
+  paraphrase: Someone once told me I spot connections others miss. They joked that my vector space has more dimensions than theirs.
+  attribution: More in
   label: Working with me
   url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
 ---
 
 ## Writing
-
-[All posts](/blog/)
 
 - **[the jagged edge of agentic analytics](/blog/the-jagged-edge-of-agentic-analytics/)**
 
@@ -34,36 +32,20 @@ testimonial:
 
   A Roundup essay and demo showing one local dbt project writing to Snowflake and Databricks catalogs with DuckDB and a single config change.
 
-- **[Iceberg?? Give it a REST!](/blog/iceberg-give-it-a-rest/)**
-
-  A Roundup essay on what Iceberg REST catalogs make possible when multiple engines share the same tables.
-
 - **[problem exists between database and user](/blog/problem-exists-between-database-and-user/)**
 
   A Roundup essay on how the interfaces we use to transform data shape the way we think.
 
-- **[The Iceberg ecosystem today](https://roundup.getdbt.com/p/the-iceberg-ecosystem-today-anders)**
-
-  A Roundup podcast conversation with Tristan Handy about what works in production and where Iceberg catalogs still get tricky.
-
-- **[Fusion Diaries](https://github.com/dbt-labs/dbt/discussions/15181)**
-
-  Community updates on Fusion’s progress, rough edges, and next steps. Also see the [Coalesce edition](https://github.com/dbt-labs/dbt/discussions/15187).
-
-- **[Proposal: External tables in dbt Core](https://github.com/dbt-labs/dbt/discussions/11265)**
-
-  A discussion about letting dbt create and manage external tables declared in a project.
+<p class="home-more"><a class="more-button" href="/blog/">More writing</a></p>
 
 ## Pretty pictures
-
-[All diagrams and whiteboards](/gallery/)
 
 [![Before and after open data infrastructure](/gallery/images/before-and-after-odi.png)](/gallery/)
 [![Fusion distribution diagram](/gallery/images/fusion-distribution.png)](/gallery/)
 
-## Open source
+<p class="home-more"><a class="more-button" href="/gallery/">More pictures</a></p>
 
-### DuckDB and Iceberg
+## Open source
 
 - **[Iceberg catalog write compatibility](https://github.com/duckdb/duckdb-iceberg/pull/1017)**
 
@@ -73,13 +55,18 @@ testimonial:
 
   Fixed `CREATE SCHEMA IF NOT EXISTS` when a concurrent operation creates the same Iceberg schema first.
 
+- **[Uppercase identifiers in DuckDB](https://github.com/duckdb/duckdb/pull/24375)**
+
+  Added an uppercase mode for unquoted SQL identifiers to help tools interoperate with engines like Snowflake.
+
+<details class="home-more">
+<summary class="more-button">More open source</summary>
+
 - **[Consistent Iceberg catalog lookups](https://github.com/duckdb/duckdb-iceberg/pull/1479)**
 
   Fixed a DuckDB cache issue so table names that differ only by case resolve consistently.
 
-- **[Uppercase identifiers in DuckDB](https://github.com/duckdb/duckdb/pull/24375)**
-
-  Added an uppercase mode for unquoted SQL identifiers to help tools interoperate with engines like Snowflake.
+</details>
 
 ## Side projects
 
@@ -91,13 +78,18 @@ testimonial:
 
   A reading companion built with dbt Charts. Follow character stats, skills, and inventory up to where you are in the series.
 
+- **[Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/)**
+
+  Switch between dashboards built with different frameworks to compare how they show the same dbt issue data.
+
+<details class="home-more">
+<summary class="more-button">More side projects</summary>
+
 - **[James River Gooners](https://gooners.anders.omg.lol/)**
 
   A searchable browser for Cannon’s Auctions, with filters for finding the good stuff.
 
-- **[Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/)**
-
-  Switch between dashboards built with different frameworks to compare how they show the same dbt issue data.
+</details>
 
 ## Things I helped out with at dbt
 
@@ -105,15 +97,18 @@ testimonial:
 
   I worked with the community on [dbt v2](https://docs.getdbt.com/docs/dbt-versions), the [dbt Information Schema](https://docs.getdbt.com/docs/build/dbt-information-schema?version=2.0) and [Checks](https://docs.getdbt.com/docs/build/checks?version=2), [Iceberg catalog support](https://roundup.getdbt.com/p/a-catalog-is-all-you-need), [Python models](https://github.com/dbt-labs/dbt/discussions/5796), and [materialized views](https://docs.getdbt.com/docs/build/materializations#materialized-view). I also built an early Iceberg prototype for [cross-platform dbt Mesh](https://www.getdbt.com/blog/introducing-cross-platform-dbt-mesh).
 
+- **[dbt Charts](https://github.com/dbt-labs/dbt-charts)**
+
+  I contribute to the open source tool for building dashboards with SQL and YAML. I’ve used it for [Crawl Atlas](https://crawl-atlas.anders.omg.lol/) and [Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/).
+
+<details class="home-more">
+<summary class="more-button">More dbt work</summary>
+
 - ### dbt adapters
 
   - **Helped create** [dbt-synapse](https://github.com/microsoft/dbt-synapse) and [dbt-firebolt](https://github.com/firebolt-db/dbt-firebolt).
   - **Shepherded** the [Databricks](https://github.com/databricks/dbt-databricks), [Starburst (Trino)](https://www.getdbt.com/blog/announcing-starburst-support), and [Microsoft Fabric](https://github.com/microsoft/dbt-fabric) adapters onto the dbt platform. I also worked on [MotherDuck support in dbt](https://github.com/dbt-labs/dbt/issues/14325).
   - **Rewrote** the [DuckDB](https://duckdb.org/2026/09/22/dbt-fusion) and [ClickHouse](https://docs.getdbt.com/docs/platform/connect-data-platform/connect-clickhouse?version=2.0) adapters for dbt v2.
-
-- **[dbt Charts](https://github.com/dbt-labs/dbt-charts)**
-
-  I contribute to the open source tool for building dashboards with SQL and YAML. I’ve used it for [Crawl Atlas](https://crawl-atlas.anders.omg.lol/) and [Dashboard Bakeoff](https://dashboard-bakeoff.anders.omg.lol/).
 
 ### dbt Core and Fusion
 
@@ -124,3 +119,5 @@ testimonial:
 - **[Issue forms for dbt Fusion](https://github.com/dbt-labs/dbt/pull/13089)**
 
   Created issue forms for bug reports, editor problems, and SQL understanding in the main dbt repository.
+
+</details>

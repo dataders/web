@@ -24,4 +24,32 @@ const posts = await getPublishedPosts();
   ) : (
     <p class="blog-empty">No posts here yet. You can find my <a href="/#writing-and-talks">writing and talks</a> on the homepage.</p>
   )}
+
+  <section class="writing-elsewhere" aria-labelledby="elsewhere">
+    <h2 id="elsewhere">Elsewhere</h2>
+    <ul class="post-list" role="list">
+      <li>
+        <h3><a href="https://roundup.getdbt.com/p/the-iceberg-ecosystem-today-anders">The Iceberg ecosystem today</a></h3>
+        <p>A Roundup podcast conversation with Tristan Handy about what works in production and where Iceberg catalogs still get tricky.</p>
+      </li>
+      <li>
+        <h3><a href="https://github.com/dbt-labs/dbt/discussions/15181">Fusion Diaries</a></h3>
+        <p>Community updates on Fusion’s progress, rough edges, and next steps. Also see the <a href="https://github.com/dbt-labs/dbt/discussions/15187">Coalesce edition</a>.</p>
+      </li>
+      <li>
+        <h3><a href="https://github.com/dbt-labs/dbt/discussions/11265">Proposal: External tables in dbt Core</a></h3>
+        <p>A discussion about letting dbt create and manage external tables declared in a project.</p>
+      </li>
+    </ul>
+  </section>
 </SiteLayout>
+
+<style>
+  .writing-elsewhere {
+    margin-top: 2rem;
+  }
+
+  .writing-elsewhere h3 {
+    margin: 0;
+  }
+</style>

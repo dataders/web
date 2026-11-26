@@ -122,7 +122,7 @@ footer {
   height: auto;
 }
 
-.home-content > ul,
+:is(.home-content, details.home-more) > ul,
 .post-list {
   display: grid;
   gap: 1rem;
@@ -131,17 +131,50 @@ footer {
   list-style: none;
 }
 
-.home-content > ul > li > h3 {
+:is(.home-content, details.home-more) > ul > li > h3 {
   margin: 0 0 0.25rem;
 }
 
-.home-content > ul > li > ul {
+:is(.home-content, details.home-more) > ul > li > ul {
   margin: 0;
   padding-inline-start: 1.25rem;
 }
 
-.home-content > ul > li > ul li + li {
+:is(.home-content, details.home-more) > ul > li > ul li + li {
   margin-top: 0.25rem;
+}
+
+.home-more {
+  margin-top: 1rem;
+}
+
+.more-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  box-sizing: border-box;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: 0.4rem;
+  color: #164c9c;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.more-button:hover {
+  color: #0e3267;
+  text-decoration: underline;
+}
+
+.more-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
+summary.more-button::-webkit-details-marker {
+  display: none;
 }
 
 .home-content li p,
