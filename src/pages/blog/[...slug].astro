@@ -9,7 +9,7 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { title, description, date } = post.data;
+const { title, description, date, originalUrl } = post.data;
 const { Content } = await render(post);
 ---
 
@@ -22,6 +22,7 @@ const { Content } = await render(post);
     <h1>{title}</h1>
     <time datetime={date}>{formatPostDate(date)}</time>
     <div class="post-content">
+      {originalUrl && <blockquote><p>this piece was originally published <a href={originalUrl}>here</a></p></blockquote>}
       <Content />
     </div>
   </article>

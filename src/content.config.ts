@@ -8,6 +8,7 @@ const blog = defineCollection({
     title: z.string(),
     date: z.iso.date(),
     description: z.string().optional(),
+    originalUrl: z.url({ protocol: /^https?$/ }).optional(),
     draft: z.boolean().default(false),
   }),
 });

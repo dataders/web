@@ -55,17 +55,21 @@ testimonial:
 
 ## Writing and talks
 
-- **[the jagged edge of agentic analytics](https://dashboard-bakeoff.anders.omg.lol/about.html)**
+- **[the jagged edge of agentic analytics](/blog/the-jagged-edge-of-agentic-analytics/)**
 
   Field notes from the Dashboard Bakeoff on building static dashboards with agents and the decisions that still need a human.
 
-- **[A Catalog Is All You Need](https://roundup.getdbt.com/p/a-catalog-is-all-you-need)**
+- **[A Catalog Is All You Need](/blog/a-catalog-is-all-you-need/)**
 
   A Roundup essay and demo showing one local dbt project writing to Snowflake and Databricks catalogs with DuckDB and a single config change.
 
-- **[Iceberg?? Give it a REST!](https://roundup.getdbt.com/p/iceberg-give-it-a-rest)**
+- **[Iceberg?? Give it a REST!](/blog/iceberg-give-it-a-rest/)**
 
   A Roundup essay on what Iceberg REST catalogs make possible when multiple engines share the same tables.
+
+- **[problem exists between database and user](/blog/problem-exists-between-database-and-user/)**
+
+  A Roundup essay on how the interfaces we use to transform data shape the way we think.
 
 - **[The Iceberg ecosystem today](https://roundup.getdbt.com/p/the-iceberg-ecosystem-today-anders)**
 

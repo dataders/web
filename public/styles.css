@@ -175,3 +175,16 @@ article > time {
   max-width: 100%;
   height: auto;
 }
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow-wrap: anywhere;
+}
+
+.post-content :is(th, td) {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: start;
+  vertical-align: top;
+}
