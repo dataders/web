@@ -20,6 +20,7 @@ testimonial:
   attribution: More in
   label: Working with me
   url: https://github.com/dataders/dataders/blob/main/WORKING_WITH_ME.md
+resume: /resume.pdf
 ---
 
 ## Writing
