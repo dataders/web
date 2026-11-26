@@ -1,0 +1,118 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+
+const screenshots = [
+  { file: 'databricks-and-snowflake', width: 1358, height: 635, alt: 'Databricks and Snowflake sharing Iceberg tables through S3 and the Iceberg REST API' },
+  { file: 'before-and-after-odi', width: 1874, height: 1085, alt: 'Comparison of data roles before and after open data infrastructure' },
+  { file: 'agent-schema', width: 2450, height: 2278, alt: 'Whiteboard showing how project metadata becomes context for analytics agents' },
+  { file: 'fusion-distribution', width: 1212, height: 922, alt: 'Fusion distribution diagram showing the parser, compiler, and execution layers' },
+  { file: 'adapter-architecture', width: 1865, height: 1356, alt: 'Two approaches to connecting a database adapter and driver' },
+  { file: 'core-vs-fusion', width: 1995, height: 1769, alt: 'Comparison of dbt Core and Fusion execution setups' },
+  { file: 'capability-map', width: 2120, height: 1440, alt: 'Map connecting compiler capabilities, features, value propositions, and personas' },
+  { file: 'metadata-commercialization', width: 1295, height: 968, alt: 'Whiteboard mapping dbt metadata primitives to user-facing capabilities' },
+  { file: 'agent-infrastructure', width: 1580, height: 934, alt: 'Whiteboard showing agent infrastructure, capabilities, and examples' },
+];
+---
+
+<SiteLayout title="Gallery · Anders Swanson" description="Diagrams and whiteboards by Anders Swanson.">
+  <ul class="gallery" role="list" aria-label="Gallery">
+    {screenshots.map(({ file, width, height, alt }, index) => {
+      const src = `/gallery/images/${file}.png`;
+
+      return (
+        <li>
+          <a href={src}>
+            <img src={src} width={width} height={height} alt={alt} loading={index < 3 ? 'eager' : 'lazy'} decoding="async" />
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+
+  <dialog id="gallery-viewer" aria-label="Enlarged screenshot">
+    <form method="dialog"><button autofocus>Close</button></form>
+    <img alt="" />
+  </dialog>
+</SiteLayout>
+
+<script>
+  const viewer = document.querySelector<HTMLDialogElement>('#gallery-viewer');
+  const enlarged = viewer?.querySelector('img');
+
+  if (viewer && enlarged) {
+    for (const link of document.querySelectorAll<HTMLAnchorElement>('.gallery a')) {
+      link.addEventListener('click', (event) => {
+        if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+
+        const image = link.querySelector('img');
+        if (!image) return;
+
+        event.preventDefault();
+        enlarged.src = link.href;
+        enlarged.alt = image.alt;
+        viewer.showModal();
+      });
+    }
+  }
+</script>
+
+<style>
+  :global(main:has(.gallery)) {
+    max-width: 86rem;
+    padding: clamp(1.25rem, 4vw, 3.5rem);
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 21rem), 1fr));
+    align-items: center;
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .gallery a {
+    display: block;
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    cursor: zoom-in;
+  }
+
+  .gallery img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 20rem;
+  }
+
+  dialog {
+    max-width: calc(100% - 1rem);
+    max-height: calc(100dvh - 1rem);
+    padding: 0.75rem;
+    border: 0;
+  }
+
+  dialog::backdrop {
+    background: rgb(0 0 0 / 72%);
+  }
+
+  dialog form {
+    margin-bottom: 0.5rem;
+    text-align: end;
+  }
+
+  dialog button {
+    font: inherit;
+    cursor: pointer;
+  }
+
+  dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: calc(100dvh - 5rem);
+    object-fit: contain;
+  }
+</style>
