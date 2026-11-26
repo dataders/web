@@ -79,18 +79,6 @@ testimonial:
 
   Community updates on Fusion’s progress, rough edges, and next steps. Also see the [Coalesce edition](https://github.com/dbt-labs/dbt/discussions/15187).
 
-- **[Open source tea leaves: Reading Iceberg’s proposed future](https://courses.getdbt.com/dbt-summit/agenda/open-source-tea-leaves-reading-icebergs-proposed-future)**
-
-  A dbt Summit peer exchange on proposals and trade-offs in Apache Iceberg.
-
-- **[RFC: Columnar validation with Arrow, ADBC, and DuckDB](https://github.com/fivetran/great_expectations/discussions/12101)**
-
-  A proposal for a shared way to validate data across files and warehouses in Great Expectations.
-
-- **[Proposal: Uppercase SQL identifiers in DuckDB](https://github.com/duckdb/duckdb/discussions/24197)**
-
-  Proposed a setting for Snowflake and Oracle style identifier casing, which I later implemented in DuckDB.
-
 - **[Proposal: External tables in dbt Core](https://github.com/dbt-labs/dbt/discussions/11265)**
 
   A discussion about letting dbt create and manage external tables declared in a project.
