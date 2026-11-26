@@ -47,8 +47,8 @@ testimonial:
 
 ## Memes
 
-[![A wide-eyed dog illustrates what happens when you gaze too long into a CSV parser](/memes/images/csv-parser.png)](/memes/)
-[![An iceberg charts the many meanings of schema in data](/memes/images/schema-iceberg.png)](/memes/)
+[![Losing sleep over how DuckDB, MDLS, Snowflake, Horizon, and Polaris handle identifier case](/memes/images/identifier-case.png)](/memes/)
+[![The hypermodern pyramid of data pyramids ranks industry recognition with expanding brains and overlapping pyramids](/memes/images/pyramid-of-data-pyramids-preview.webp)](/memes/)
 
 <p class="home-more"><a class="more-button" href="/memes/">More memes</a></p>
 
