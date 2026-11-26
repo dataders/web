@@ -47,8 +47,8 @@ testimonial:
 
 ## Memes
 
-[![Losing sleep over how DuckDB, MDLS, Snowflake, Horizon, and Polaris handle identifier case](/memes/images/identifier-case.png)](/memes/)
-[![The hypermodern pyramid of data pyramids ranks industry recognition with expanding brains and overlapping pyramids](/memes/images/pyramid-of-data-pyramids-preview.webp)](/memes/)
+[![Losing sleep over how DuckDB, MDLS, Snowflake, Horizon, and Polaris handle identifier case](/memes/images/identifier-case.png)](/memes/images/identifier-case.png)
+[![The hypermodern pyramid of data pyramids ranks industry recognition with expanding brains and overlapping pyramids](/memes/images/pyramid-of-data-pyramids-preview.webp)](/memes/images/pyramid-of-data-pyramids.webp)
 
 <p class="home-more"><a class="more-button" href="/memes/">More memes</a></p>
 
